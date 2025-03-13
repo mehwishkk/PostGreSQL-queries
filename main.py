@@ -1,0 +1,10 @@
+import psycopg2 as pg2
+conn=pg2.connect(database='dvdrental',user='postgres',password='Passwin@1234')
+cur=conn.cursor()
+print(cur.execute('SELECT * from payment'))
+print(cur.fetchone())
+print(cur.fetchmany(10))
+data=cur.fetchmany(5)
+print(data)
+print(data[3])
+conn.close()
