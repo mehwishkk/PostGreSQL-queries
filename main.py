@@ -1,5 +1,5 @@
 import psycopg2 as pg2
-conn=pg2.connect(database='dvdrental',user='postgres',password='Passwin@1234')
+conn=pg2.connect(database='dvdrental',user='postgres',password='password')
 cur=conn.cursor()
 print(cur.execute('SELECT * from payment'))
 print(cur.fetchone())
